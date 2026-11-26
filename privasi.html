@@ -1,24 +1,98 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Kebijakan Privasi RuangTulis</title><link rel="stylesheet" href="style.css"></head><body>
-<h1>Kebijakan Privasi RuangTulis</h1>
-<p>Terakhir diperbarui: 6 November 2026. RuangTulis dikembangkan oleh Miselia Studio.</p>
-<h2>Data yang disimpan</h2>
-<p>Naskah, tokoh, dan pengaturan Anda disimpan di perangkat Anda sendiri. Kami tidak mengoperasikan server, tidak memasang pelacak, dan tidak menampilkan iklan. Pengembang tidak dapat melihat naskah Anda. Jika Anda menyalakan sinkronisasi, salinan naskah dikirim ke Google Drive Anda sendiri. Karena itu, halaman Keamanan Data di Google Play mencantumkan "File dan dokumen" sebagai data yang dikirim keluar dari perangkat, sesuai definisi Google.</p>
-<h2>Google Drive (opsional)</h2>
-<p>Jika Anda menghubungkan akun Google, RuangTulis meminta tiga izin: melihat alamat email Anda (hanya untuk ditampilkan di layar Sinkronisasi), dan mengakses <em>hanya berkas yang dibuat oleh RuangTulis sendiri</em> di Google Drive Anda (izin <code>drive.file</code>). RuangTulis tidak dapat membaca berkas lain di Drive Anda.</p>
-<p>Naskah yang disinkronkan dikirim langsung dari perangkat Anda ke Drive Anda. Tidak ada pihak ketiga, termasuk pengembang, yang menerimanya. Token akses disimpan hanya di perangkat Anda.</p>
-<h2>Memutus akses</h2>
-<p>Anda dapat memutuskan koneksi kapan saja lewat menu Sinkronisasi di aplikasi, atau lewat pengaturan akun Google Anda di <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Menghapus folder "RuangTulis" di Drive menghapus salinan cloud.</p>
-<h2 id="hapus-data">Cara menghapus data Anda</h2>
-<p>Karena pengembang tidak menyimpan data Anda di server mana pun, semua data berada di bawah kendali Anda sendiri:</p>
-<ul>
-<li><strong>Data di perangkat</strong> (naskah, tokoh, catatan, riwayat versi, pengaturan): hapus naskah dari dalam aplikasi, atau hapus seluruh data dengan menghapus data aplikasi atau mencopot pemasangan RuangTulis.</li>
-<li><strong>Salinan di Google Drive</strong> (jika sinkronisasi pernah dinyalakan): putuskan koneksi lewat menu Sinkronisasi, lalu hapus folder "RuangTulis" di Google Drive Anda. Salinan tersebut terhapus sesuai aturan Google Drive (termasuk masa simpan di Sampah).</li>
-<li><strong>Akses akun Google</strong>: cabut izin RuangTulis di <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
-</ul>
-<p>Tidak ada data yang tersisa di pihak pengembang setelah langkah di atas.</p>
-<h2>Penggunaan data Google</h2>
-<p>Penggunaan informasi yang diterima dari Google API oleh RuangTulis mematuhi <a href="https://developers.google.com/terms/api-services-user-data-policy">Kebijakan Data Pengguna Layanan API Google</a>, termasuk persyaratan Penggunaan Terbatas.</p>
-<h2>Kontak</h2>
-<p>Pertanyaan tentang privasi dapat dikirim ke <a href="mailto:niskalastudio.dev@gmail.com">niskalastudio.dev@gmail.com</a>.</p>
-<p><a href="index.html">Kembali</a></p>
-</body></html>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3edf8">
+  <title>Kebijakan Privasi RuangTulis</title>
+  <style>
+    :root {
+      color-scheme: light;
+      --latar: #f3edf8;
+      --permukaan: #fcfafd;
+      --tinta: #29262a;
+      --redup: #584b62;
+      --ungu: #604376;
+      --garis: #ddd0e7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--latar);
+      color: var(--tinta);
+      font: 1rem/1.65 system-ui, sans-serif;
+    }
+    .wadah {
+      width: min(calc(100% - 2rem), 48rem);
+      margin-inline: auto;
+    }
+    header { border-bottom: 1px solid var(--garis); }
+    header .wadah { padding-block: .75rem; }
+    a { color: var(--ungu); text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid var(--ungu); outline-offset: 4px; }
+    header a { display: inline-block; padding-block: .55rem; font-weight: 600; }
+    main { padding-block: clamp(2.5rem, 8vw, 5rem); }
+    h1, h2 { margin: 0; font-family: Georgia, serif; font-weight: 400; line-height: 1.12; }
+    h1 { max-width: 17ch; font-size: clamp(2.5rem, 7vw, 4.5rem); }
+    h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    p { margin: .85rem 0 0; color: var(--redup); }
+    .pengantar { max-width: 55ch; margin-top: 1rem; font-size: 1.125rem; }
+    .informasi {
+      margin-top: 2rem;
+      padding: clamp(1.25rem, 5vw, 2rem);
+      background: var(--permukaan);
+      border: 1px solid var(--garis);
+      border-top: .25rem solid var(--ungu);
+      border-radius: .75rem;
+    }
+    section + section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--garis); }
+    ul { padding-inline-start: 1.25rem; color: var(--redup); }
+    li + li { margin-top: .5rem; }
+    .informasi a { overflow-wrap: anywhere; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wadah">
+      <a href="./">Kembali ke informasi RuangTulis</a>
+    </div>
+  </header>
+  <main class="wadah">
+    <h1>Kebijakan Privasi RuangTulis</h1>
+    <p>Terakhir diperbarui: 6 November 2026. RuangTulis dikembangkan oleh Miselia Studio.</p>
+    <div class="informasi">
+      <section>
+        <h2>Data yang disimpan</h2>
+        <p>Naskah, tokoh, dan pengaturan Anda disimpan di perangkat Anda sendiri. Kami tidak mengoperasikan server, tidak memasang pelacak, dan tidak menampilkan iklan. Pengembang tidak dapat melihat naskah Anda. Jika Anda menyalakan sinkronisasi, salinan naskah dikirim ke Google Drive Anda sendiri. Karena itu, halaman Keamanan Data di Google Play mencantumkan "File dan dokumen" sebagai data yang dikirim keluar dari perangkat, sesuai definisi Google.</p>
+      </section>
+      <section>
+        <h2>Google Drive (opsional)</h2>
+        <p>Jika Anda menghubungkan akun Google, RuangTulis meminta tiga izin: melihat alamat email Anda (hanya untuk ditampilkan di layar Sinkronisasi), dan mengakses <em>hanya berkas yang dibuat oleh RuangTulis sendiri</em> di Google Drive Anda (izin <code>drive.file</code>). RuangTulis tidak dapat membaca berkas lain di Drive Anda.</p>
+        <p>Naskah yang disinkronkan dikirim langsung dari perangkat Anda ke Drive Anda. Tidak ada pihak ketiga, termasuk pengembang, yang menerimanya. Token akses disimpan hanya di perangkat Anda.</p>
+      </section>
+      <section>
+        <h2>Memutus akses</h2>
+        <p>Anda dapat memutuskan koneksi kapan saja lewat menu Sinkronisasi di aplikasi, atau lewat pengaturan akun Google Anda di <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>. Menghapus folder "RuangTulis" di Drive menghapus salinan cloud.</p>
+      </section>
+      <section>
+        <h2 id="hapus-data">Cara menghapus data Anda</h2>
+        <p>Karena pengembang tidak menyimpan data Anda di server mana pun, semua data berada di bawah kendali Anda sendiri:</p>
+        <ul>
+        <li><strong>Data di perangkat</strong> (naskah, tokoh, catatan, riwayat versi, pengaturan): hapus naskah dari dalam aplikasi, atau hapus seluruh data dengan menghapus data aplikasi atau mencopot pemasangan RuangTulis.</li>
+        <li><strong>Salinan di Google Drive</strong> (jika sinkronisasi pernah dinyalakan): putuskan koneksi lewat menu Sinkronisasi, lalu hapus folder "RuangTulis" di Google Drive Anda. Salinan tersebut terhapus sesuai aturan Google Drive (termasuk masa simpan di Sampah).</li>
+        <li><strong>Akses akun Google</strong>: cabut izin RuangTulis di <a href="https://myaccount.google.com/permissions">myaccount.google.com/permissions</a>.</li>
+        </ul>
+        <p>Tidak ada data yang tersisa di pihak pengembang setelah langkah di atas.</p>
+      </section>
+      <section>
+        <h2>Penggunaan data Google</h2>
+        <p>Penggunaan informasi yang diterima dari Google API oleh RuangTulis mematuhi <a href="https://developers.google.com/terms/api-services-user-data-policy">Kebijakan Data Pengguna Layanan API Google</a>, termasuk persyaratan Penggunaan Terbatas.</p>
+      </section>
+      <section>
+        <h2>Kontak</h2>
+        <p>Pertanyaan tentang privasi dapat dikirim ke <a href="mailto:support@miseliastudio.com">support@miseliastudio.com</a>.</p>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
