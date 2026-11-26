@@ -1,7 +1,90 @@
-<!doctype html><html lang="id"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>RuangTulis</title><link rel="stylesheet" href="style.css"></head><body>
-<h1>RuangTulis</h1>
-<p>RuangTulis adalah aplikasi untuk penulis fiksi berbahasa Indonesia: menyusun naskah per bab dan adegan, mengelola tokoh, memeriksa naskah, dan menyimpan riwayat versi. Aplikasi ini tersedia untuk macOS, iPhone, Windows, dan Android.</p>
-<h2>Sinkronisasi dengan Google Drive</h2>
-<p>Bila Anda memilih menghubungkan Google Drive, RuangTulis menyimpan salinan naskah Anda di folder bernama "RuangTulis" di Drive Anda sendiri, supaya naskah bisa dilanjutkan di perangkat lain.</p>
-<p><a href="privasi.html">Kebijakan Privasi</a></p>
-</body></html>
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f3edf8">
+  <title>Sinkronisasi dan privasi · RuangTulis</title>
+  <meta name="description" content="Informasi tentang penyimpanan naskah dan sinkronisasi Google Drive di RuangTulis.">
+  <style>
+    :root {
+      color-scheme: light;
+      --latar: #f3edf8;
+      --permukaan: #fcfafd;
+      --tinta: #29262a;
+      --redup: #584b62;
+      --ungu: #604376;
+      --garis: #ddd0e7;
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: var(--latar);
+      color: var(--tinta);
+      font: 1rem/1.65 system-ui, sans-serif;
+    }
+    .wadah {
+      width: min(calc(100% - 2rem), 48rem);
+      margin-inline: auto;
+    }
+    header { border-bottom: 1px solid var(--garis); }
+    header .wadah { padding-block: .75rem; }
+    a { color: var(--ungu); text-underline-offset: .2em; }
+    a:focus-visible { outline: 3px solid var(--ungu); outline-offset: 4px; }
+    header a { display: inline-block; padding-block: .55rem; font-weight: 600; }
+    main { padding-block: clamp(2.5rem, 8vw, 5rem); }
+    h1, h2 { margin: 0; font-family: Georgia, serif; font-weight: 400; line-height: 1.12; }
+    h1 { max-width: 17ch; font-size: clamp(2.5rem, 7vw, 4.5rem); }
+    h2 { font-size: clamp(1.5rem, 4vw, 2rem); }
+    p { margin: .85rem 0 0; color: var(--redup); }
+    .pengantar { max-width: 55ch; margin-top: 1rem; font-size: 1.125rem; }
+    .informasi {
+      margin-top: 2rem;
+      padding: clamp(1.25rem, 5vw, 2rem);
+      background: var(--permukaan);
+      border: 1px solid var(--garis);
+      border-top: .25rem solid var(--ungu);
+      border-radius: .75rem;
+    }
+    section + section { margin-top: 1.5rem; padding-top: 1.5rem; border-top: 1px solid var(--garis); }
+    .privasi {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: .6rem .9rem;
+      border: 1px solid var(--ungu);
+      border-radius: .35rem;
+      color: var(--permukaan);
+      background: var(--ungu);
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .privasi:hover { text-decoration: underline; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wadah">
+      <a href="https://miseliastudio.com/ruangtulis/">Kembali ke RuangTulis</a>
+    </div>
+  </header>
+  <main class="wadah">
+    <h1>Sinkronisasi dan privasi RuangTulis</h1>
+    <p class="pengantar">Cara RuangTulis menyimpan naskahmu di versi web dan saat kamu menghubungkan Google Drive.</p>
+    <div class="informasi">
+      <section aria-labelledby="drive">
+        <h2 id="drive">Google Drive</h2>
+        <p>Di versi yang mendukung sinkronisasi, kamu bisa memilih untuk menghubungkan Google Drive. RuangTulis menyimpan salinan naskah di folder “RuangTulis” di Drive milikmu, agar kamu bisa melanjutkan naskah di perangkat lain yang mendukung sinkronisasi.</p>
+      </section>
+      <section aria-labelledby="web-beta">
+        <h2 id="web-beta">Web beta</h2>
+        <p>Naskah tersimpan di browser yang kamu gunakan. Kamu bisa mengunduh cadangan JSON untuk memulihkan naskah atau memindahkannya ke perangkat lain. Sinkronisasi Google Drive belum tersedia di versi web.</p>
+      </section>
+      <section aria-labelledby="privasi">
+        <h2 id="privasi">Privasi</h2>
+        <p>Baca cara RuangTulis menangani data dan menggunakan akses Google Drive.</p>
+        <a class="privasi" href="https://assasinotes-pixel.github.io/ruangtulis-info/privasi.html">Baca kebijakan privasi</a>
+      </section>
+    </div>
+  </main>
+</body>
+</html>
